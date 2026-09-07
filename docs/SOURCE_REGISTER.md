@@ -18,6 +18,10 @@ Internal register. Research conclusions for the owner are written in Russian.
 | SRC-012 | https://rus-motor.ru/ | Competitor website | 2026-09-07 | European sourcing and payment-risk communication |
 | SRC-013 | https://omegaautogroup.ru/ | Competitor website | 2026-09-07 | VIN selection and specific-unit presentation |
 | SRC-014 | https://www.motor-groups.ru/ | Competitor website | 2026-09-07 | Stock, catalogue and manager-assisted selection |
+| SRC-015 | https://help-ru.tilda.cc/html | Official Tilda documentation | 2026-09-07 | T123 HTML, CSS and JavaScript behavior and selector guidance |
+| SRC-016 | https://help-ru.tilda.cc/domain | Official Tilda documentation | 2026-09-07 | Domain purchase, annual-plan gift and supported zones |
+| SRC-017 | https://help-ru.tilda.cc/subscription | Official Tilda documentation | 2026-09-07 | Subscription and annual domain offer |
+| SRC-018 | https://help-ru.tilda.cc/cookies-consent | Official Tilda documentation | 2026-09-07 | Cookie controls and simplified internal statistics |
 
 ## Evidence rules
 

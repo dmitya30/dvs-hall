@@ -66,6 +66,11 @@ This file is the first operational source of truth after dialogue compression or
 
 ## Tilda implementation rules
 
+- Current architecture decision: one Tilda page with one T123 HTML block containing namespaced semantic HTML, CSS and only essential JavaScript.
+- Keep the canonical T123 source in the repository and paste the mechanically verified build into Tilda.
+- Use a unique root class for every custom selector; do not style generic Tilda elements, universal selectors or bare HTML tags outside the root.
+- The custom implementation must not depend on external JavaScript libraries, third-party page builders or monthly services.
+- Validate custom code on a published technical URL because T123 code does not execute normally inside the Tilda editor.
 - Confirm the client account, tariff, domain, page ownership and publishing access before implementation.
 - Prefer native Tilda blocks when they meet the approved prototype; use Zero Block only where it materially improves the result.
 - Keep custom code and external dependencies to the minimum needed.
