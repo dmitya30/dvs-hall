@@ -11,7 +11,7 @@ This file is the first operational source of truth after dialogue compression or
 - Conversion channels: telephone, Telegram and WhatsApp.
 - Public lead forms are excluded unless the owner explicitly reopens that decision.
 - Market demand, customer objections and advertising compliance take priority over unsupported seller preferences.
-- All business claims remain hypotheses until supported by current research or evidence supplied by the client.
+- The three client-supplied prior websites are the owner-approved commercial baseline. Their repeated claims may be used in the landing page unless the owner corrects them or a material contradiction appears.
 
 ## User environment
 
@@ -40,7 +40,7 @@ This file is the first operational source of truth after dialogue compression or
 
 ## Research standard
 
-- Treat statements from Dmitry, Alexander, the client, competitors and prior websites as claims to verify, not automatic facts.
+- Treat statements from Dmitry and explicit owner decisions as authoritative project inputs. Distinguish them from independently verified market facts and competitor claims.
 - Separate every material item into one of four classes: verified fact, source claim, hypothesis or project decision.
 - For current market, legal, advertising-policy and platform claims, use current sources and record the URL and access date.
 - Prefer primary sources for laws, Yandex policies, Tilda capabilities and official business information.
@@ -57,7 +57,7 @@ This file is the first operational source of truth after dialogue compression or
 - Keep the page proportionate to the stated budget and deadline; do not expand it into a catalogue or multi-page website without approval.
 - Do not use lead forms, quizzes, callback widgets or file-upload fields under the current decision.
 - Do not add fake reviews, fake inventory, fake counters, fake offices, fake certificates or unverifiable urgency.
-- Do not publish claims about years in business, direct imports, countries of origin, inspections, mileage, stock, warranties, delivery times, documents or round-the-clock service until verified.
+- Claims consistently present on the three client-supplied prior websites are approved for reuse as client-provided commercial claims. Do not strengthen, quantify or extend them beyond that baseline without approval.
 - Phone and messenger links must not be published until final contacts are supplied and checked.
 - Do not conceal the actual seller, substitute unrelated legal entities or create misleading identities for advertising approval.
 - Ensure the landing page and advertisements describe the same offer without material contradictions.
@@ -89,7 +89,7 @@ This file is the first operational source of truth after dialogue compression or
 10. Publication and post-publication checks.
 
 - Do not skip an earlier gate merely because the launch date is close.
-- Do not publish before the legal identity, contacts and material commercial claims are verified.
+- Do not publish before final contacts are supplied and the landing page is checked against the available Yandex moderation notice.
 - Do not commit an implementation presented for human visual QA until the requested QA gate passes.
 - Internal documentation may be committed after mechanical validation.
 
