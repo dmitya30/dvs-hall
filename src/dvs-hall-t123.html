@@ -1,0 +1,1464 @@
+<style>
+.dvs-hall {
+  --dvs-bg: #101719;
+  --dvs-bg-soft: #172124;
+  --dvs-surface: #1d292c;
+  --dvs-light: #f3f1eb;
+  --dvs-white: #ffffff;
+  --dvs-text: #263135;
+  --dvs-muted: #687477;
+  --dvs-line: rgba(255, 255, 255, 0.12);
+  --dvs-accent: #f29a38;
+  --dvs-accent-dark: #d67813;
+  --dvs-green: #24a866;
+  --dvs-blue: #2899d5;
+  --dvs-shadow: 0 24px 70px rgba(4, 12, 14, 0.18);
+  --dvs-radius: 26px;
+  color: var(--dvs-text);
+  background: var(--dvs-light);
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  overflow: clip;
+}
+.dvs-hall__shell {
+  width: min(1180px, calc(100% - 40px));
+  margin-right: auto;
+  margin-left: auto;
+}
+.dvs-hall__header {
+  position: relative;
+  z-index: 20;
+  color: var(--dvs-white);
+  background: var(--dvs-bg);
+  border-bottom: 1px solid var(--dvs-line);
+}
+.dvs-hall__header-inner {
+  min-height: 78px;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+.dvs-hall__brand {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+  color: var(--dvs-white);
+  font-size: 21px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+}
+.dvs-hall__brand-mark {
+  width: 37px;
+  height: 37px;
+  margin-right: 11px;
+  display: inline-grid;
+  place-items: center;
+  color: var(--dvs-bg);
+  background: var(--dvs-accent);
+  border-radius: 11px;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  transform: rotate(-4deg);
+}
+.dvs-hall__nav {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+  margin-left: auto;
+}
+.dvs-hall__nav-link {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 160ms ease;
+}
+.dvs-hall__nav-link:hover,
+.dvs-hall__nav-link:focus-visible {
+  color: var(--dvs-white);
+}
+.dvs-hall__header-phone {
+  color: var(--dvs-white);
+  font-size: 15px;
+  font-weight: 750;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.dvs-hall__hero {
+  position: relative;
+  color: var(--dvs-white);
+  background:
+    radial-gradient(circle at 82% 28%, rgba(242, 154, 56, 0.2), transparent 27%),
+    radial-gradient(circle at 10% 90%, rgba(57, 124, 130, 0.16), transparent 32%),
+    var(--dvs-bg);
+}
+.dvs-hall__hero::after {
+  content: "";
+  position: absolute;
+  right: -130px;
+  bottom: -180px;
+  width: 430px;
+  height: 430px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 50%;
+}
+.dvs-hall__hero-inner {
+  position: relative;
+  z-index: 2;
+  min-height: 660px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(390px, 0.92fr);
+  align-items: center;
+  gap: 54px;
+  padding-top: 72px;
+  padding-bottom: 82px;
+}
+.dvs-hall__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0 0 19px;
+  color: #ffc581;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+.dvs-hall__eyebrow-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--dvs-accent);
+  border-radius: 50%;
+  box-shadow: 0 0 0 6px rgba(242, 154, 56, 0.12);
+}
+.dvs-hall__title {
+  max-width: 760px;
+  margin: 0;
+  color: var(--dvs-white);
+  font-size: clamp(44px, 5.2vw, 72px);
+  line-height: 0.98;
+  font-weight: 850;
+  letter-spacing: -0.055em;
+}
+.dvs-hall__title-accent {
+  color: var(--dvs-accent);
+}
+.dvs-hall__lead {
+  max-width: 670px;
+  margin: 27px 0 0;
+  color: rgba(255, 255, 255, 0.71);
+  font-size: clamp(18px, 1.8vw, 21px);
+  line-height: 1.52;
+}
+.dvs-hall__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 11px;
+  margin-top: 32px;
+}
+.dvs-hall__button {
+  min-height: 54px;
+  padding: 0 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  color: var(--dvs-bg);
+  background: var(--dvs-accent);
+  border: 1px solid var(--dvs-accent);
+  border-radius: 14px;
+  font-size: 15px;
+  font-weight: 800;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 10px 28px rgba(242, 154, 56, 0.17);
+  transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
+}
+.dvs-hall__button:hover,
+.dvs-hall__button:focus-visible {
+  background: #ffae52;
+  border-color: #ffae52;
+  transform: translateY(-2px);
+}
+.dvs-hall__button--outline {
+  color: var(--dvs-white);
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.22);
+  box-shadow: none;
+}
+.dvs-hall__button--outline:hover,
+.dvs-hall__button--outline:focus-visible {
+  color: var(--dvs-white);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+.dvs-hall__button--light {
+  color: var(--dvs-bg);
+  background: var(--dvs-white);
+  border-color: var(--dvs-white);
+  box-shadow: none;
+}
+.dvs-hall__button--light:hover,
+.dvs-hall__button--light:focus-visible {
+  color: var(--dvs-bg);
+  background: #fff6e9;
+  border-color: #fff6e9;
+}
+.dvs-hall__button-icon {
+  width: 19px;
+  height: 19px;
+  display: inline-grid;
+  place-items: center;
+  flex: 0 0 auto;
+  border: 1.5px solid currentColor;
+  border-radius: 50%;
+  font-size: 10px;
+  line-height: 1;
+}
+.dvs-hall__prompt {
+  max-width: 650px;
+  margin: 17px 0 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  color: rgba(255, 255, 255, 0.51);
+  font-size: 13px;
+}
+.dvs-hall__prompt-icon {
+  color: var(--dvs-accent);
+  font-weight: 900;
+}
+.dvs-hall__visual {
+  position: relative;
+  min-height: 430px;
+  display: grid;
+  place-items: center;
+}
+.dvs-hall__visual-glow {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(242, 154, 56, 0.2), rgba(242, 154, 56, 0.02) 63%, transparent 71%);
+  border-radius: 50%;
+}
+.dvs-hall__engine {
+  position: relative;
+  z-index: 2;
+  width: min(100%, 480px);
+  height: auto;
+  filter: drop-shadow(0 32px 28px rgba(0, 0, 0, 0.35));
+}
+.dvs-hall__visual-card {
+  position: absolute;
+  z-index: 3;
+  right: 2px;
+  bottom: 25px;
+  width: 205px;
+  padding: 17px 18px;
+  color: var(--dvs-white);
+  background: rgba(30, 42, 45, 0.93);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 17px;
+  box-shadow: var(--dvs-shadow);
+  backdrop-filter: blur(10px);
+}
+.dvs-hall__visual-card-label {
+  margin: 0 0 5px;
+  color: var(--dvs-accent);
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.dvs-hall__visual-card-text {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 14px;
+  font-weight: 650;
+  line-height: 1.4;
+}
+.dvs-hall__trust {
+  position: relative;
+  z-index: 4;
+  margin-top: -1px;
+  color: var(--dvs-white);
+  background: var(--dvs-bg-soft);
+  border-top: 1px solid var(--dvs-line);
+}
+.dvs-hall__trust-grid {
+  min-height: 105px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.dvs-hall__trust-item {
+  padding: 25px 20px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  border-right: 1px solid var(--dvs-line);
+}
+.dvs-hall__trust-item:first-child {
+  padding-left: 0;
+}
+.dvs-hall__trust-item:last-child {
+  padding-right: 0;
+  border-right: 0;
+}
+.dvs-hall__trust-number {
+  color: var(--dvs-accent);
+  font-size: 21px;
+  font-weight: 900;
+}
+.dvs-hall__trust-text {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 13px;
+  font-weight: 650;
+  line-height: 1.35;
+}
+.dvs-hall__section {
+  padding-top: 104px;
+  padding-bottom: 104px;
+}
+.dvs-hall__section--white {
+  background: var(--dvs-white);
+}
+.dvs-hall__section--dark {
+  color: var(--dvs-white);
+  background: var(--dvs-bg);
+}
+.dvs-hall__section--compact {
+  padding-top: 84px;
+  padding-bottom: 84px;
+}
+.dvs-hall__section-head {
+  max-width: 760px;
+  margin-bottom: 43px;
+}
+.dvs-hall__section-kicker {
+  margin: 0 0 12px;
+  color: var(--dvs-accent-dark);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+.dvs-hall__section--dark .dvs-hall__section-kicker {
+  color: var(--dvs-accent);
+}
+.dvs-hall__heading {
+  margin: 0;
+  color: var(--dvs-text);
+  font-size: clamp(34px, 4vw, 53px);
+  line-height: 1.06;
+  font-weight: 850;
+  letter-spacing: -0.045em;
+}
+.dvs-hall__section--dark .dvs-hall__heading {
+  color: var(--dvs-white);
+}
+.dvs-hall__section-copy {
+  max-width: 690px;
+  margin: 18px 0 0;
+  color: var(--dvs-muted);
+  font-size: 18px;
+}
+.dvs-hall__section--dark .dvs-hall__section-copy {
+  color: rgba(255, 255, 255, 0.62);
+}
+.dvs-hall__cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+.dvs-hall__card {
+  min-height: 258px;
+  padding: 27px;
+  display: flex;
+  flex-direction: column;
+  background: var(--dvs-white);
+  border: 1px solid #e5e5df;
+  border-radius: 22px;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+.dvs-hall__card:hover {
+  border-color: #ded3c5;
+  box-shadow: 0 18px 45px rgba(20, 31, 34, 0.08);
+  transform: translateY(-4px);
+}
+.dvs-hall__card-icon {
+  width: 47px;
+  height: 47px;
+  display: grid;
+  place-items: center;
+  color: var(--dvs-bg);
+  background: #ffe6c8;
+  border-radius: 14px;
+  font-size: 20px;
+  font-weight: 900;
+}
+.dvs-hall__card-title {
+  margin: 28px 0 8px;
+  color: var(--dvs-text);
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+.dvs-hall__card-copy {
+  margin: 0;
+  color: var(--dvs-muted);
+  font-size: 14px;
+}
+.dvs-hall__origins {
+  margin-top: 22px;
+  padding: 22px 25px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: #e9e7df;
+  border-radius: 18px;
+}
+.dvs-hall__origins-label {
+  flex: 0 0 auto;
+  font-size: 13px;
+  font-weight: 850;
+}
+.dvs-hall__origin-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.dvs-hall__origin {
+  padding: 7px 11px;
+  color: #4a5558;
+  background: rgba(255, 255, 255, 0.67);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+}
+.dvs-hall__steps {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.dvs-hall__steps::before {
+  content: "";
+  position: absolute;
+  top: 27px;
+  left: 8%;
+  right: 8%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(242, 154, 56, 0.55), transparent);
+}
+.dvs-hall__step {
+  position: relative;
+  z-index: 2;
+}
+.dvs-hall__step-number {
+  width: 55px;
+  height: 55px;
+  display: grid;
+  place-items: center;
+  color: var(--dvs-bg);
+  background: var(--dvs-accent);
+  border: 7px solid var(--dvs-bg);
+  outline: 1px solid rgba(242, 154, 56, 0.33);
+  border-radius: 50%;
+  font-size: 15px;
+  font-weight: 900;
+}
+.dvs-hall__step-title {
+  margin: 25px 0 9px;
+  color: var(--dvs-white);
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+.dvs-hall__step-copy {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.57);
+  font-size: 14px;
+}
+.dvs-hall__section-actions {
+  margin-top: 39px;
+}
+.dvs-hall__proof-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.86fr) minmax(0, 1.14fr);
+  gap: 75px;
+  align-items: start;
+}
+.dvs-hall__proof-panel {
+  position: sticky;
+  top: 30px;
+  padding: 37px;
+  color: var(--dvs-white);
+  background:
+    linear-gradient(145deg, rgba(242, 154, 56, 0.13), transparent 46%),
+    var(--dvs-bg-soft);
+  border-radius: var(--dvs-radius);
+  box-shadow: var(--dvs-shadow);
+}
+.dvs-hall__proof-mark {
+  width: 66px;
+  height: 66px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 31px;
+  color: var(--dvs-bg);
+  background: var(--dvs-accent);
+  border-radius: 20px;
+  font-size: 31px;
+  font-weight: 900;
+}
+.dvs-hall__proof-panel-title {
+  margin: 0;
+  color: var(--dvs-white);
+  font-size: 32px;
+  line-height: 1.12;
+  font-weight: 850;
+  letter-spacing: -0.04em;
+}
+.dvs-hall__proof-panel-copy {
+  margin: 17px 0 0;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 16px;
+}
+.dvs-hall__proof-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 13px;
+}
+.dvs-hall__proof-item {
+  padding: 25px;
+  background: var(--dvs-white);
+  border: 1px solid #e5e5df;
+  border-radius: 19px;
+}
+.dvs-hall__proof-item-icon {
+  color: var(--dvs-accent-dark);
+  font-size: 19px;
+  font-weight: 900;
+}
+.dvs-hall__proof-item-title {
+  margin: 18px 0 7px;
+  font-size: 17px;
+  font-weight: 850;
+  letter-spacing: -0.02em;
+}
+.dvs-hall__proof-item-copy {
+  margin: 0;
+  color: var(--dvs-muted);
+  font-size: 13px;
+}
+.dvs-hall__delivery {
+  position: relative;
+  overflow: hidden;
+  color: var(--dvs-white);
+  background: var(--dvs-accent-dark);
+}
+.dvs-hall__delivery::before {
+  content: "";
+  position: absolute;
+  top: -210px;
+  right: -110px;
+  width: 520px;
+  height: 520px;
+  border: 95px solid rgba(255, 255, 255, 0.06);
+  border-radius: 50%;
+}
+.dvs-hall__delivery-inner {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 55px;
+  align-items: center;
+}
+.dvs-hall__delivery-title {
+  max-width: 730px;
+  margin: 0;
+  color: var(--dvs-white);
+  font-size: clamp(34px, 4.2vw, 56px);
+  line-height: 1.02;
+  font-weight: 850;
+  letter-spacing: -0.05em;
+}
+.dvs-hall__delivery-copy {
+  max-width: 710px;
+  margin: 17px 0 0;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 17px;
+}
+.dvs-hall__delivery-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 25px;
+}
+.dvs-hall__delivery-point {
+  padding: 8px 12px;
+  color: rgba(255, 255, 255, 0.84);
+  background: rgba(255, 255, 255, 0.11);
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 750;
+}
+.dvs-hall__faq {
+  max-width: 910px;
+}
+.dvs-hall__faq-item {
+  margin-bottom: 10px;
+  background: var(--dvs-white);
+  border: 1px solid #e3e2dc;
+  border-radius: 17px;
+  overflow: hidden;
+}
+.dvs-hall__faq-question {
+  position: relative;
+  padding: 22px 58px 22px 23px;
+  color: var(--dvs-text);
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  list-style: none;
+}
+.dvs-hall__faq-question::-webkit-details-marker {
+  display: none;
+}
+.dvs-hall__faq-question::after {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  right: 23px;
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  color: var(--dvs-bg);
+  background: #eeeae1;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: 500;
+  transform: translateY(-50%);
+}
+.dvs-hall__faq-item[open] .dvs-hall__faq-question::after {
+  content: "−";
+  color: var(--dvs-white);
+  background: var(--dvs-bg);
+}
+.dvs-hall__faq-answer {
+  padding: 0 58px 22px 23px;
+  color: var(--dvs-muted);
+  font-size: 15px;
+}
+.dvs-hall__faq-answer-text {
+  margin: 0;
+}
+.dvs-hall__contact {
+  position: relative;
+  overflow: hidden;
+  color: var(--dvs-white);
+  background:
+    linear-gradient(120deg, rgba(242, 154, 56, 0.12), transparent 42%),
+    var(--dvs-bg);
+}
+.dvs-hall__contact::after {
+  content: "ДВС";
+  position: absolute;
+  right: -20px;
+  bottom: -88px;
+  color: rgba(255, 255, 255, 0.025);
+  font-size: 260px;
+  line-height: 1;
+  font-weight: 950;
+  letter-spacing: -0.08em;
+}
+.dvs-hall__contact-inner {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 380px;
+  gap: 70px;
+  align-items: center;
+}
+.dvs-hall__contact-title {
+  max-width: 720px;
+  margin: 0;
+  color: var(--dvs-white);
+  font-size: clamp(38px, 4.7vw, 62px);
+  line-height: 1.01;
+  font-weight: 850;
+  letter-spacing: -0.052em;
+}
+.dvs-hall__contact-copy {
+  max-width: 690px;
+  margin: 21px 0 0;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 18px;
+}
+.dvs-hall__contact-card {
+  padding: 29px;
+  color: var(--dvs-text);
+  background: var(--dvs-white);
+  border-radius: 23px;
+  box-shadow: var(--dvs-shadow);
+}
+.dvs-hall__contact-card-label {
+  margin: 0 0 6px;
+  color: var(--dvs-muted);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.dvs-hall__contact-phone {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: var(--dvs-text);
+  font-size: 24px;
+  font-weight: 850;
+  letter-spacing: -0.035em;
+  text-decoration: none;
+}
+.dvs-hall__contact-buttons {
+  display: grid;
+  gap: 9px;
+}
+.dvs-hall__contact-link {
+  min-height: 49px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--dvs-white);
+  background: var(--dvs-green);
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+}
+.dvs-hall__contact-link--telegram {
+  background: var(--dvs-blue);
+}
+.dvs-hall__contact-link--phone {
+  background: var(--dvs-bg-soft);
+}
+.dvs-hall__contact-link-arrow {
+  font-size: 18px;
+}
+.dvs-hall__contact-hint {
+  margin: 16px 0 0;
+  color: var(--dvs-muted);
+  font-size: 12px;
+  line-height: 1.45;
+}
+.dvs-hall__footer {
+  color: rgba(255, 255, 255, 0.55);
+  background: #0a1012;
+}
+.dvs-hall__footer-inner {
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.dvs-hall__footer-brand {
+  color: var(--dvs-white);
+  font-weight: 850;
+}
+.dvs-hall__footer-copy {
+  margin-right: auto;
+  font-size: 12px;
+}
+.dvs-hall__footer-contact {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.dvs-hall__demo-toast {
+  position: fixed;
+  z-index: 99999;
+  right: 22px;
+  bottom: 22px;
+  max-width: 340px;
+  padding: 15px 18px;
+  color: var(--dvs-white);
+  background: #263336;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 13px;
+  box-shadow: 0 18px 55px rgba(0, 0, 0, 0.28);
+  font-size: 13px;
+  font-weight: 700;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(12px);
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+.dvs-hall__demo-toast--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.dvs-hall__mobile-bar {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(14px);
+  transition: opacity 180ms ease, visibility 180ms ease, transform 180ms ease;
+}
+.dvs-hall__button:focus-visible,
+.dvs-hall__contact-link:focus-visible,
+.dvs-hall__header-phone:focus-visible,
+.dvs-hall__footer-contact:focus-visible,
+.dvs-hall__brand:focus-visible,
+.dvs-hall__nav-link:focus-visible,
+.dvs-hall__faq-question:focus-visible {
+  outline: 3px solid #ffd195;
+  outline-offset: 3px;
+}
+@media (max-width: 1050px) {
+  .dvs-hall__nav {
+    display: none;
+  }
+  .dvs-hall__header-phone {
+    margin-left: auto;
+  }
+  .dvs-hall__hero-inner {
+    grid-template-columns: minmax(0, 1fr) 380px;
+    gap: 20px;
+  }
+  .dvs-hall__cards {
+    grid-template-columns: 1fr 1fr;
+  }
+  .dvs-hall__card {
+    min-height: 225px;
+  }
+  .dvs-hall__proof-layout {
+    gap: 35px;
+  }
+  .dvs-hall__contact-inner {
+    grid-template-columns: minmax(0, 1fr) 340px;
+    gap: 35px;
+  }
+}
+@media (max-width: 820px) {
+  .dvs-hall__hero-inner {
+    min-height: auto;
+    grid-template-columns: 1fr;
+    padding-top: 64px;
+  }
+  .dvs-hall__visual {
+    min-height: 350px;
+  }
+  .dvs-hall__engine {
+    width: min(88%, 440px);
+  }
+  .dvs-hall__visual-card {
+    right: 10%;
+    bottom: 5px;
+  }
+  .dvs-hall__trust-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .dvs-hall__trust-item:nth-child(2) {
+    border-right: 0;
+  }
+  .dvs-hall__trust-item:nth-child(-n+2) {
+    border-bottom: 1px solid var(--dvs-line);
+  }
+  .dvs-hall__trust-item:first-child,
+  .dvs-hall__trust-item:last-child {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  .dvs-hall__steps {
+    grid-template-columns: 1fr 1fr;
+    gap: 35px 20px;
+  }
+  .dvs-hall__steps::before {
+    display: none;
+  }
+  .dvs-hall__proof-layout {
+    grid-template-columns: 1fr;
+  }
+  .dvs-hall__proof-panel {
+    position: relative;
+    top: auto;
+  }
+  .dvs-hall__delivery-inner {
+    grid-template-columns: 1fr;
+  }
+  .dvs-hall__contact-inner {
+    grid-template-columns: 1fr;
+  }
+  .dvs-hall__contact-card {
+    max-width: 500px;
+  }
+}
+@media (max-width: 600px) {
+  .dvs-hall {
+    padding-bottom: 70px;
+  }
+  .dvs-hall__shell {
+    width: min(100% - 28px, 1180px);
+  }
+  .dvs-hall__header-inner {
+    min-height: 67px;
+  }
+  .dvs-hall__brand {
+    font-size: 18px;
+  }
+  .dvs-hall__brand-mark {
+    width: 33px;
+    height: 33px;
+    margin-right: 8px;
+  }
+  .dvs-hall__header-phone {
+    font-size: 12px;
+  }
+  .dvs-hall__hero-inner {
+    padding-top: 43px;
+    padding-bottom: 52px;
+  }
+  .dvs-hall__title {
+    font-size: clamp(37px, 11.3vw, 49px);
+    line-height: 1.01;
+  }
+  .dvs-hall__lead {
+    margin-top: 21px;
+    font-size: 17px;
+  }
+  .dvs-hall__actions {
+    display: grid;
+  }
+  .dvs-hall__button {
+    width: 100%;
+    min-height: 53px;
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+  .dvs-hall__visual {
+    min-height: 285px;
+  }
+  .dvs-hall__visual-glow {
+    width: 280px;
+    height: 280px;
+  }
+  .dvs-hall__visual-card {
+    right: 0;
+    bottom: -10px;
+    width: 188px;
+  }
+  .dvs-hall__trust-grid {
+    grid-template-columns: 1fr;
+  }
+  .dvs-hall__trust-item,
+  .dvs-hall__trust-item:first-child,
+  .dvs-hall__trust-item:last-child {
+    min-height: 76px;
+    padding: 16px 4px;
+    border-right: 0;
+    border-bottom: 1px solid var(--dvs-line);
+  }
+  .dvs-hall__trust-item:last-child {
+    border-bottom: 0;
+  }
+  .dvs-hall__section {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+  .dvs-hall__section--compact {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+  .dvs-hall__section-head {
+    margin-bottom: 31px;
+  }
+  .dvs-hall__heading {
+    font-size: 36px;
+  }
+  .dvs-hall__section-copy {
+    font-size: 16px;
+  }
+  .dvs-hall__cards {
+    grid-template-columns: 1fr;
+  }
+  .dvs-hall__card {
+    min-height: auto;
+  }
+  .dvs-hall__origins {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .dvs-hall__steps {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .dvs-hall__step {
+    display: grid;
+    grid-template-columns: 49px 1fr;
+    column-gap: 14px;
+  }
+  .dvs-hall__step-number {
+    width: 49px;
+    height: 49px;
+    grid-row: 1 / span 2;
+  }
+  .dvs-hall__step-title {
+    margin: 2px 0 5px;
+  }
+  .dvs-hall__proof-panel {
+    padding: 27px;
+  }
+  .dvs-hall__proof-panel-title {
+    font-size: 28px;
+  }
+  .dvs-hall__proof-list {
+    grid-template-columns: 1fr;
+  }
+  .dvs-hall__delivery-title {
+    font-size: 38px;
+  }
+  .dvs-hall__faq-question {
+    padding: 19px 53px 19px 18px;
+  }
+  .dvs-hall__faq-answer {
+    padding: 0 45px 19px 18px;
+  }
+  .dvs-hall__contact::after {
+    display: none;
+  }
+  .dvs-hall__contact-title {
+    font-size: 41px;
+  }
+  .dvs-hall__contact-card {
+    padding: 23px;
+  }
+  .dvs-hall__contact-phone {
+    font-size: 21px;
+  }
+  .dvs-hall__footer-inner {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 7px;
+  }
+  .dvs-hall__footer-copy {
+    margin-right: 0;
+  }
+  .dvs-hall__mobile-bar {
+    position: fixed;
+    z-index: 9998;
+    right: 9px;
+    bottom: 9px;
+    left: 9px;
+    height: 57px;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    background: rgba(15, 23, 25, 0.96);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 15px;
+    box-shadow: 0 16px 45px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(12px);
+  }
+  .dvs-hall__mobile-bar--visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+  .dvs-hall__mobile-link {
+    display: grid;
+    place-items: center;
+    color: var(--dvs-white);
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: 800;
+    text-decoration: none;
+  }
+  .dvs-hall__mobile-link--whatsapp {
+    background: var(--dvs-green);
+  }
+  .dvs-hall__mobile-link--telegram {
+    background: var(--dvs-blue);
+  }
+  .dvs-hall__demo-toast {
+    right: 13px;
+    bottom: 78px;
+    left: 13px;
+    max-width: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .dvs-hall__button,
+  .dvs-hall__card,
+  .dvs-hall__demo-toast,
+  .dvs-hall__nav-link {
+    transition: none;
+  }
+}
+</style>
+
+<div class="dvs-hall" id="dvs-hall">
+  <header class="dvs-hall__header">
+    <div class="dvs-hall__shell dvs-hall__header-inner">
+      <a class="dvs-hall__brand" href="#dvs-hall" aria-label="ДВС-Холл, в начало страницы">
+        <span class="dvs-hall__brand-mark" aria-hidden="true">ДХ</span>
+        ДВС-Холл
+      </a>
+      <nav class="dvs-hall__nav" aria-label="Основная навигация">
+        <a class="dvs-hall__nav-link" href="#engines">Что поставляем</a>
+        <a class="dvs-hall__nav-link" href="#process">Как работаем</a>
+        <a class="dvs-hall__nav-link" href="#inspection">Проверка</a>
+        <a class="dvs-hall__nav-link" href="#faq">Вопросы</a>
+      </nav>
+      <a class="dvs-hall__header-phone" href="#contacts" data-demo data-channel="phone">+7 XXX XXX XX XX</a>
+    </div>
+  </header>
+
+  <main class="dvs-hall__main">
+    <section class="dvs-hall__hero">
+      <div class="dvs-hall__shell dvs-hall__hero-inner">
+        <div class="dvs-hall__hero-content">
+          <p class="dvs-hall__eyebrow"><span class="dvs-hall__eyebrow-dot" aria-hidden="true"></span>Поставка по России · Подбор по VIN</p>
+          <h1 class="dvs-hall__title">Контрактные и новые <span class="dvs-hall__title-accent">двигатели</span> для вашего автомобиля</h1>
+          <p class="dvs-hall__lead">Подберём подходящую модификацию, покажем состояние двигателя и рассчитаем стоимость с доставкой в ваш регион.</p>
+          <div class="dvs-hall__actions">
+            <a class="dvs-hall__button" href="#contacts" data-demo data-channel="whatsapp"><span class="dvs-hall__button-icon" aria-hidden="true">W</span>Написать в WhatsApp</a>
+            <a class="dvs-hall__button dvs-hall__button--outline" href="#contacts" data-demo data-channel="telegram"><span class="dvs-hall__button-icon" aria-hidden="true">T</span>Telegram</a>
+          </div>
+          <p class="dvs-hall__prompt"><span class="dvs-hall__prompt-icon" aria-hidden="true">→</span><span>Для подбора отправьте VIN, маркировку двигателя или марку, модель и год автомобиля.</span></p>
+        </div>
+
+        <div class="dvs-hall__visual" aria-hidden="true">
+          <div class="dvs-hall__visual-glow"></div>
+          <svg class="dvs-hall__engine" viewBox="0 0 560 450" role="img" aria-label="Стилизованное изображение автомобильного двигателя">
+            <defs>
+              <linearGradient id="dvs-metal" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#607074"/>
+                <stop offset="0.52" stop-color="#303d40"/>
+                <stop offset="1" stop-color="#192326"/>
+              </linearGradient>
+              <linearGradient id="dvs-metal-light" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#a5b0b1"/>
+                <stop offset="1" stop-color="#566467"/>
+              </linearGradient>
+              <linearGradient id="dvs-orange" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#ffb25a"/>
+                <stop offset="1" stop-color="#d97915"/>
+              </linearGradient>
+            </defs>
+            <ellipse cx="282" cy="401" rx="198" ry="24" fill="#050a0b" opacity="0.36"/>
+            <path d="M159 164h256l35 61-21 147H137l-24-146z" fill="url(#dvs-metal)" stroke="#829093" stroke-width="3"/>
+            <path d="M181 116h209l27 48H153z" fill="#3f4e51" stroke="#899699" stroke-width="3"/>
+            <path d="M198 78h172l20 38H181z" fill="url(#dvs-metal-light)" stroke="#b2bbbc" stroke-width="3"/>
+            <rect x="219" y="51" width="133" height="31" rx="9" fill="#202c2f" stroke="#8f9b9d" stroke-width="3"/>
+            <path d="M238 55h94l-12 18h-70z" fill="#f29a38" opacity="0.88"/>
+            <path d="M137 224H96l-22 58 40 34h23z" fill="#344245" stroke="#849194" stroke-width="3"/>
+            <path d="M430 222h49l28 42-29 52h-49z" fill="#344245" stroke="#849194" stroke-width="3"/>
+            <circle cx="208" cy="264" r="49" fill="#182225" stroke="#9ba5a7" stroke-width="7"/>
+            <circle cx="208" cy="264" r="27" fill="url(#dvs-orange)"/>
+            <circle cx="208" cy="264" r="10" fill="#2a3639"/>
+            <circle cx="361" cy="270" r="62" fill="#1b2528" stroke="#7d8a8d" stroke-width="8"/>
+            <circle cx="361" cy="270" r="39" fill="#3b494c" stroke="#a3adaf" stroke-width="5"/>
+            <circle cx="361" cy="270" r="13" fill="url(#dvs-orange)"/>
+            <path d="M169 165h225l-13 42H181z" fill="#202b2e" stroke="#6f7e81" stroke-width="2"/>
+            <g fill="#f29a38">
+              <rect x="195" y="177" width="27" height="9" rx="4"/>
+              <rect x="239" y="177" width="27" height="9" rx="4"/>
+              <rect x="283" y="177" width="27" height="9" rx="4"/>
+              <rect x="327" y="177" width="27" height="9" rx="4"/>
+            </g>
+            <path d="M155 342h255l-8 30H160z" fill="#182225"/>
+            <path d="M171 372l-17 30h72l11-30zM341 372l12 30h71l-17-30z" fill="#2d3a3d" stroke="#7f8c8f" stroke-width="3"/>
+            <path d="M93 199c-32-24-47-9-46 22 1 21 14 35 35 43" fill="none" stroke="#f29a38" stroke-width="10" stroke-linecap="round"/>
+            <path d="M444 185c43-21 66-2 62 32-3 24-18 34-37 39" fill="none" stroke="#9ca7a9" stroke-width="9" stroke-linecap="round"/>
+            <g fill="#bdc5c6">
+              <circle cx="171" cy="147" r="6"/>
+              <circle cx="396" cy="147" r="6"/>
+              <circle cx="157" cy="352" r="6"/>
+              <circle cx="411" cy="352" r="6"/>
+            </g>
+          </svg>
+          <div class="dvs-hall__visual-card">
+            <p class="dvs-hall__visual-card-label">Точный подбор</p>
+            <p class="dvs-hall__visual-card-text">Сверяем VIN, маркировку и комплектность агрегата</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="dvs-hall__trust">
+      <div class="dvs-hall__shell dvs-hall__trust-grid">
+        <div class="dvs-hall__trust-item"><span class="dvs-hall__trust-number">01</span><span class="dvs-hall__trust-text">Подбор модификации<br>по VIN</span></div>
+        <div class="dvs-hall__trust-item"><span class="dvs-hall__trust-number">02</span><span class="dvs-hall__trust-text">Эндоскопия и замер<br>компрессии</span></div>
+        <div class="dvs-hall__trust-item"><span class="dvs-hall__trust-number">03</span><span class="dvs-hall__trust-text">Договор, документы<br>и гарантия</span></div>
+        <div class="dvs-hall__trust-item"><span class="dvs-hall__trust-number">04</span><span class="dvs-hall__trust-text">Упаковка и доставка<br>по России</span></div>
+      </div>
+    </div>
+
+    <section class="dvs-hall__section" id="engines">
+      <div class="dvs-hall__shell">
+        <div class="dvs-hall__section-head">
+          <p class="dvs-hall__section-kicker">Что поставляем</p>
+          <h2 class="dvs-hall__heading">Подберём двигатель под конкретный автомобиль</h2>
+          <p class="dvs-hall__section-copy">У одной модели двигателя могут быть разные модификации, крепления и электронные компоненты. Поэтому подбор начинаем с VIN или точной маркировки агрегата.</p>
+        </div>
+        <div class="dvs-hall__cards">
+          <article class="dvs-hall__card">
+            <div class="dvs-hall__card-icon" aria-hidden="true">К</div>
+            <h3 class="dvs-hall__card-title">Контрактные двигатели</h3>
+            <p class="dvs-hall__card-copy">Проверенные агрегаты с подбором под модификацию автомобиля.</p>
+          </article>
+          <article class="dvs-hall__card">
+            <div class="dvs-hall__card-icon" aria-hidden="true">Н</div>
+            <h3 class="dvs-hall__card-title">Новые двигатели</h3>
+            <p class="dvs-hall__card-copy">Новые агрегаты под заказ для подходящих марок и моделей.</p>
+          </article>
+          <article class="dvs-hall__card">
+            <div class="dvs-hall__card-icon" aria-hidden="true">+</div>
+            <h3 class="dvs-hall__card-title">Навесное оборудование</h3>
+            <p class="dvs-hall__card-copy">Компоненты и комплектация двигателя по согласованию при подборе.</p>
+          </article>
+          <article class="dvs-hall__card">
+            <div class="dvs-hall__card-icon" aria-hidden="true">З</div>
+            <h3 class="dvs-hall__card-title">Запчасти к двигателю</h3>
+            <p class="dvs-hall__card-copy">Уточним доступные варианты вместе с основным агрегатом.</p>
+          </article>
+        </div>
+        <div class="dvs-hall__origins">
+          <span class="dvs-hall__origins-label">Направления поставок</span>
+          <div class="dvs-hall__origin-list">
+            <span class="dvs-hall__origin">Япония</span>
+            <span class="dvs-hall__origin">Европа</span>
+            <span class="dvs-hall__origin">США</span>
+            <span class="dvs-hall__origin">ОАЭ</span>
+            <span class="dvs-hall__origin">Корея</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="dvs-hall__section dvs-hall__section--dark" id="process">
+      <div class="dvs-hall__shell">
+        <div class="dvs-hall__section-head">
+          <p class="dvs-hall__section-kicker">Как работаем</p>
+          <h2 class="dvs-hall__heading">От данных автомобиля до отправки двигателя</h2>
+          <p class="dvs-hall__section-copy">Понятный процесс без каталога из случайных позиций и долгого самостоятельного поиска.</p>
+        </div>
+        <div class="dvs-hall__steps">
+          <article class="dvs-hall__step">
+            <div class="dvs-hall__step-number">1</div>
+            <h3 class="dvs-hall__step-title">Вы присылаете данные</h3>
+            <p class="dvs-hall__step-copy">VIN, маркировку двигателя либо марку, модель, год и объём.</p>
+          </article>
+          <article class="dvs-hall__step">
+            <div class="dvs-hall__step-number">2</div>
+            <h3 class="dvs-hall__step-title">Проверяем совместимость</h3>
+            <p class="dvs-hall__step-copy">Сверяем модификацию и уточняем необходимую комплектность.</p>
+          </article>
+          <article class="dvs-hall__step">
+            <div class="dvs-hall__step-number">3</div>
+            <h3 class="dvs-hall__step-title">Показываем вариант</h3>
+            <p class="dvs-hall__step-copy">Сообщаем состояние, комплектацию и стоимость двигателя.</p>
+          </article>
+          <article class="dvs-hall__step">
+            <div class="dvs-hall__step-number">4</div>
+            <h3 class="dvs-hall__step-title">Оформляем и отправляем</h3>
+            <p class="dvs-hall__step-copy">Согласовываем документы, гарантию, упаковку и доставку.</p>
+          </article>
+        </div>
+        <div class="dvs-hall__section-actions">
+          <a class="dvs-hall__button" href="#contacts" data-demo data-channel="whatsapp">Отправить данные автомобиля <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="dvs-hall__section dvs-hall__section--white" id="inspection">
+      <div class="dvs-hall__shell dvs-hall__proof-layout">
+        <div class="dvs-hall__proof-panel">
+          <div class="dvs-hall__proof-mark" aria-hidden="true">✓</div>
+          <h2 class="dvs-hall__proof-panel-title">Проверяем двигатель до отправки</h2>
+          <p class="dvs-hall__proof-panel-copy">Состояние, комплектность и условия покупки согласовываются до оплаты конкретного агрегата.</p>
+        </div>
+        <div class="dvs-hall__proof-list">
+          <article class="dvs-hall__proof-item">
+            <span class="dvs-hall__proof-item-icon" aria-hidden="true">01</span>
+            <h3 class="dvs-hall__proof-item-title">Осмотр эндоскопом</h3>
+            <p class="dvs-hall__proof-item-copy">Проверяем внутреннее состояние цилиндров и видимые признаки износа.</p>
+          </article>
+          <article class="dvs-hall__proof-item">
+            <span class="dvs-hall__proof-item-icon" aria-hidden="true">02</span>
+            <h3 class="dvs-hall__proof-item-title">Замер компрессии</h3>
+            <p class="dvs-hall__proof-item-copy">Проверяем показатели по цилиндрам перед отправкой агрегата.</p>
+          </article>
+          <article class="dvs-hall__proof-item">
+            <span class="dvs-hall__proof-item-icon" aria-hidden="true">03</span>
+            <h3 class="dvs-hall__proof-item-title">Фото и отчёт</h3>
+            <p class="dvs-hall__proof-item-copy">Показываем выбранный двигатель и сообщаем результаты проверки.</p>
+          </article>
+          <article class="dvs-hall__proof-item">
+            <span class="dvs-hall__proof-item-icon" aria-hidden="true">04</span>
+            <h3 class="dvs-hall__proof-item-title">Точная комплектность</h3>
+            <p class="dvs-hall__proof-item-copy">Заранее согласовываем состав навесного оборудования.</p>
+          </article>
+          <article class="dvs-hall__proof-item">
+            <span class="dvs-hall__proof-item-icon" aria-hidden="true">05</span>
+            <h3 class="dvs-hall__proof-item-title">Договор и документы</h3>
+            <p class="dvs-hall__proof-item-copy">Передаём документы на агрегат, в том числе необходимые для оформления.</p>
+          </article>
+          <article class="dvs-hall__proof-item">
+            <span class="dvs-hall__proof-item-icon" aria-hidden="true">06</span>
+            <h3 class="dvs-hall__proof-item-title">Гарантия</h3>
+            <p class="dvs-hall__proof-item-copy">Условия гарантии фиксируются при оформлении конкретного заказа.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="dvs-hall__section dvs-hall__section--compact dvs-hall__delivery">
+      <div class="dvs-hall__shell dvs-hall__delivery-inner">
+        <div class="dvs-hall__delivery-content">
+          <h2 class="dvs-hall__delivery-title">Доставим двигатель в ваш регион</h2>
+          <p class="dvs-hall__delivery-copy">Крепим агрегат на паллете и отправляем транспортной компанией или железнодорожным транспортом. Способ и стоимость рассчитываются для конкретного города.</p>
+          <div class="dvs-hall__delivery-points">
+            <span class="dvs-hall__delivery-point">Жёсткое крепление</span>
+            <span class="dvs-hall__delivery-point">Отправка по России</span>
+            <span class="dvs-hall__delivery-point">Согласование перевозчика</span>
+          </div>
+        </div>
+        <a class="dvs-hall__button dvs-hall__button--light" href="#contacts">Рассчитать доставку <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+    <section class="dvs-hall__section" id="faq">
+      <div class="dvs-hall__shell">
+        <div class="dvs-hall__section-head">
+          <p class="dvs-hall__section-kicker">Вопросы и ответы</p>
+          <h2 class="dvs-hall__heading">Что важно знать до покупки</h2>
+        </div>
+        <div class="dvs-hall__faq">
+          <details class="dvs-hall__faq-item">
+            <summary class="dvs-hall__faq-question">Что нужно прислать для подбора?</summary>
+            <div class="dvs-hall__faq-answer"><p class="dvs-hall__faq-answer-text">Лучше всего VIN автомобиля и маркировку двигателя. Если их нет под рукой, напишите марку, модель, год выпуска, объём и тип топлива.</p></div>
+          </details>
+          <details class="dvs-hall__faq-item">
+            <summary class="dvs-hall__faq-question">Можно ли подобрать двигатель только по модели автомобиля?</summary>
+            <div class="dvs-hall__faq-answer"><p class="dvs-hall__faq-answer-text">Можно начать с модели, но для точной проверки совместимости обычно потребуется VIN или маркировка двигателя.</p></div>
+          </details>
+          <details class="dvs-hall__faq-item">
+            <summary class="dvs-hall__faq-question">Можно ли увидеть двигатель до оплаты?</summary>
+            <div class="dvs-hall__faq-answer"><p class="dvs-hall__faq-answer-text">Для подобранного варианта предоставляются фотографии и информация о проведённой проверке.</p></div>
+          </details>
+          <details class="dvs-hall__faq-item">
+            <summary class="dvs-hall__faq-question">Что входит в комплект двигателя?</summary>
+            <div class="dvs-hall__faq-answer"><p class="dvs-hall__faq-answer-text">Комплектность зависит от конкретного двигателя. Состав навесного оборудования согласовывается и фиксируется до оплаты.</p></div>
+          </details>
+          <details class="dvs-hall__faq-item">
+            <summary class="dvs-hall__faq-question">Какие документы передаются?</summary>
+            <div class="dvs-hall__faq-answer"><p class="dvs-hall__faq-answer-text">К двигателю предоставляются договор и документы на агрегат. Точный комплект подтверждается при оформлении.</p></div>
+          </details>
+          <details class="dvs-hall__faq-item">
+            <summary class="dvs-hall__faq-question">Как выполняется доставка?</summary>
+            <div class="dvs-hall__faq-answer"><p class="dvs-hall__faq-answer-text">Двигатель закрепляется на паллете и отправляется согласованной транспортной компанией либо железнодорожным транспортом.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="dvs-hall__section dvs-hall__contact" id="contacts">
+      <div class="dvs-hall__shell dvs-hall__contact-inner">
+        <div class="dvs-hall__contact-content">
+          <p class="dvs-hall__section-kicker">Подбор двигателя</p>
+          <h2 class="dvs-hall__contact-title">Пришлите данные автомобиля — подберём подходящий вариант</h2>
+          <p class="dvs-hall__contact-copy">Напишите VIN, маркировку двигателя либо марку, модель и год автомобиля. Менеджер проверит совместимость и рассчитает стоимость доставки.</p>
+        </div>
+        <aside class="dvs-hall__contact-card" aria-label="Контакты">
+          <p class="dvs-hall__contact-card-label">Позвонить</p>
+          <a class="dvs-hall__contact-phone" href="#contacts" data-demo data-channel="phone">+7 XXX XXX XX XX</a>
+          <div class="dvs-hall__contact-buttons">
+            <a class="dvs-hall__contact-link" href="#contacts" data-demo data-channel="whatsapp"><span>Написать в WhatsApp</span><span class="dvs-hall__contact-link-arrow" aria-hidden="true">→</span></a>
+            <a class="dvs-hall__contact-link dvs-hall__contact-link--telegram" href="#contacts" data-demo data-channel="telegram"><span>@dvs_hall_XXXX</span><span class="dvs-hall__contact-link-arrow" aria-hidden="true">→</span></a>
+            <a class="dvs-hall__contact-link dvs-hall__contact-link--phone" href="#contacts" data-demo data-channel="phone"><span>Позвонить менеджеру</span><span class="dvs-hall__contact-link-arrow" aria-hidden="true">→</span></a>
+          </div>
+          <p class="dvs-hall__contact-hint">Сейчас указаны демонстрационные контакты. Реальные ссылки будут добавлены перед запуском рекламы.</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="dvs-hall__footer">
+    <div class="dvs-hall__shell dvs-hall__footer-inner">
+      <span class="dvs-hall__footer-brand">ДВС-Холл</span>
+      <span class="dvs-hall__footer-copy">Контрактные и новые двигатели с доставкой по России · <span data-current-year>2026</span></span>
+      <a class="dvs-hall__footer-contact" href="#contacts" data-demo data-channel="phone">+7 XXX XXX XX XX</a>
+      <a class="dvs-hall__footer-contact" href="#contacts" data-demo data-channel="telegram">@dvs_hall_XXXX</a>
+    </div>
+  </footer>
+
+  <div class="dvs-hall__mobile-bar" aria-label="Быстрые контакты">
+    <a class="dvs-hall__mobile-link" href="#contacts" data-demo data-channel="phone">Позвонить</a>
+    <a class="dvs-hall__mobile-link dvs-hall__mobile-link--whatsapp" href="#contacts" data-demo data-channel="whatsapp">WhatsApp</a>
+    <a class="dvs-hall__mobile-link dvs-hall__mobile-link--telegram" href="#contacts" data-demo data-channel="telegram">Telegram</a>
+  </div>
+
+  <div class="dvs-hall__demo-toast" role="status" aria-live="polite">Это визуальный прототип. Реальные контакты будут добавлены перед запуском.</div>
+</div>
+
+<script>
+(function () {
+  const root = document.getElementById("dvs-hall");
+  if (!root) {
+    return;
+  }
+
+  const year = root.querySelector("[data-current-year]");
+  if (year) {
+    year.textContent = String(new Date().getFullYear());
+  }
+
+  const toast = root.querySelector(".dvs-hall__demo-toast");
+  const mobileBar = root.querySelector(".dvs-hall__mobile-bar");
+  const hero = root.querySelector(".dvs-hall__hero");
+  let toastTimer = 0;
+
+  root.querySelectorAll("a[data-demo]").forEach(function (link) {
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
+      if (!toast) {
+        return;
+      }
+      toast.classList.add("dvs-hall__demo-toast--visible");
+      window.clearTimeout(toastTimer);
+      toastTimer = window.setTimeout(function () {
+        toast.classList.remove("dvs-hall__demo-toast--visible");
+      }, 2600);
+    });
+  });
+
+  function syncMobileBar() {
+    if (!mobileBar || !hero) {
+      return;
+    }
+    const heroBottom = hero.offsetTop + hero.offsetHeight;
+    const shouldShow = window.innerWidth <= 600 && window.scrollY >= heroBottom - 80;
+    mobileBar.classList.toggle("dvs-hall__mobile-bar--visible", shouldShow);
+  }
+
+  window.addEventListener("scroll", syncMobileBar, {passive: true});
+  window.addEventListener("resize", syncMobileBar);
+  syncMobileBar();
+})();
+</script>
