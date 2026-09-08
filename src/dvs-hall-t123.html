@@ -50,19 +50,12 @@
   letter-spacing: -0.02em;
   text-decoration: none;
 }
-.dvs-hall__brand-mark {
-  width: 37px;
-  height: 37px;
+.dvs-hall__brand-logo {
+  width: 54px;
+  height: auto;
   margin-right: 11px;
-  display: inline-grid;
-  place-items: center;
-  color: var(--dvs-bg);
-  background: var(--dvs-accent);
-  border-radius: 11px;
-  font-size: 12px;
-  font-weight: 900;
-  letter-spacing: -0.05em;
-  transform: rotate(-4deg);
+  display: block;
+  flex: 0 0 auto;
 }
 .dvs-hall__nav {
   display: flex;
@@ -209,15 +202,18 @@
   border-color: #fff6e9;
 }
 .dvs-hall__button-icon {
-  width: 19px;
-  height: 19px;
+  width: 20px;
+  height: 20px;
   display: inline-grid;
   place-items: center;
   flex: 0 0 auto;
-  border: 1.5px solid currentColor;
-  border-radius: 50%;
-  font-size: 10px;
-  line-height: 1;
+  color: currentColor;
+}
+.dvs-hall__button-icon-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  fill: currentColor;
 }
 .dvs-hall__prompt {
   max-width: 650px;
@@ -916,9 +912,8 @@
   .dvs-hall__brand {
     font-size: 18px;
   }
-  .dvs-hall__brand-mark {
-    width: 33px;
-    height: 33px;
+  .dvs-hall__brand-logo {
+    width: 48px;
     margin-right: 8px;
   }
   .dvs-hall__header-phone {
@@ -1115,7 +1110,7 @@
   <header class="dvs-hall__header">
     <div class="dvs-hall__shell dvs-hall__header-inner">
       <a class="dvs-hall__brand" href="#dvs-hall" aria-label="ДВС-Холл, в начало страницы">
-        <span class="dvs-hall__brand-mark" aria-hidden="true">ДХ</span>
+        <img class="dvs-hall__brand-logo" src="https://static.tildacdn.com/tild3864-6532-4935-a432-336534393139/source-logo.webp" width="150" height="83" alt="" decoding="async">
         ДВС-Холл
       </a>
       <nav class="dvs-hall__nav" aria-label="Основная навигация">
@@ -1136,62 +1131,15 @@
           <h1 class="dvs-hall__title">Контрактные и новые <span class="dvs-hall__title-accent">двигатели</span> для вашего автомобиля</h1>
           <p class="dvs-hall__lead">Подберём подходящую модификацию, покажем состояние двигателя и рассчитаем стоимость с доставкой в ваш регион.</p>
           <div class="dvs-hall__actions">
-            <a class="dvs-hall__button" href="#contacts" data-demo data-channel="whatsapp"><span class="dvs-hall__button-icon" aria-hidden="true">W</span>Написать в WhatsApp</a>
-            <a class="dvs-hall__button dvs-hall__button--outline" href="#contacts" data-demo data-channel="telegram"><span class="dvs-hall__button-icon" aria-hidden="true">T</span>Telegram</a>
+            <a class="dvs-hall__button" href="#contacts" data-demo data-channel="whatsapp"><span class="dvs-hall__button-icon" aria-hidden="true"><svg class="dvs-hall__button-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" focusable="false"><path d="M19.268 16.045c-.355-.79-.729-.806-1.068-.82-.277-.012-.593-.011-.909-.011s-.83.119-1.265.594-1.661 1.622-1.661 3.956 1.7 4.59 1.937 4.906c.237.316 3.282 5.259 8.104 7.161 4.007 1.58 4.823 1.266 5.693 1.187s2.807-1.147 3.202-2.255.395-2.057.277-2.255c-.119-.198-.435-.316-.909-.554s-2.807-1.385-3.242-1.543-.751-.237-1.068.238c-.316.474-1.225 1.543-1.502 1.859-.277.317-.554.357-1.028.119-.474-.238-2.002-.738-3.815-2.354-1.41-1.257-2.362-2.81-2.639-3.285-.277-.474-.03-.731.208-.968.213-.213.474-.554.712-.831.237-.277.316-.475.474-.791.158-.317.079-.594-.04-.831-.118-.239-1.04-2.585-1.462-3.523z"/></svg></span>Написать в WhatsApp</a>
+            <a class="dvs-hall__button dvs-hall__button--outline" href="#contacts" data-demo data-channel="telegram"><span class="dvs-hall__button-icon" aria-hidden="true"><svg class="dvs-hall__button-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" focusable="false"><path d="M5.43 11.87c3.5-1.52 5.83-2.53 7-3.02 3.33-1.39 4.02-1.63 4.47-1.64.1 0 .32.02.47.14.12.1.15.23.17.32.02.1.04.31.02.47-.18 1.9-.96 6.5-1.36 8.62-.17.9-.5 1.2-.82 1.23-.7.07-1.23-.46-1.9-.9-1.06-.7-1.65-1.12-2.68-1.8-1.19-.78-.42-1.21.26-1.91.18-.18 3.25-2.98 3.31-3.23.01-.03.01-.15-.05-.21-.07-.06-.18-.04-.25-.02-.1.02-1.8 1.14-5.07 3.35-.48.33-.92.49-1.31.48-.43-.01-1.25-.24-1.86-.44-.75-.24-1.35-.37-1.3-.79.03-.21.32-.43.9-.65z"/></svg></span>Telegram</a>
           </div>
           <p class="dvs-hall__prompt"><span class="dvs-hall__prompt-icon" aria-hidden="true">→</span><span>Для подбора отправьте VIN, маркировку двигателя или марку, модель и год автомобиля.</span></p>
         </div>
 
         <div class="dvs-hall__visual" aria-hidden="true">
           <div class="dvs-hall__visual-glow"></div>
-          <svg class="dvs-hall__engine" viewBox="0 0 560 450" role="img" aria-label="Стилизованное изображение автомобильного двигателя">
-            <defs>
-              <linearGradient id="dvs-metal" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0" stop-color="#607074"/>
-                <stop offset="0.52" stop-color="#303d40"/>
-                <stop offset="1" stop-color="#192326"/>
-              </linearGradient>
-              <linearGradient id="dvs-metal-light" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0" stop-color="#a5b0b1"/>
-                <stop offset="1" stop-color="#566467"/>
-              </linearGradient>
-              <linearGradient id="dvs-orange" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0" stop-color="#ffb25a"/>
-                <stop offset="1" stop-color="#d97915"/>
-              </linearGradient>
-            </defs>
-            <ellipse cx="282" cy="401" rx="198" ry="24" fill="#050a0b" opacity="0.36"/>
-            <path d="M159 164h256l35 61-21 147H137l-24-146z" fill="url(#dvs-metal)" stroke="#829093" stroke-width="3"/>
-            <path d="M181 116h209l27 48H153z" fill="#3f4e51" stroke="#899699" stroke-width="3"/>
-            <path d="M198 78h172l20 38H181z" fill="url(#dvs-metal-light)" stroke="#b2bbbc" stroke-width="3"/>
-            <rect x="219" y="51" width="133" height="31" rx="9" fill="#202c2f" stroke="#8f9b9d" stroke-width="3"/>
-            <path d="M238 55h94l-12 18h-70z" fill="#f29a38" opacity="0.88"/>
-            <path d="M137 224H96l-22 58 40 34h23z" fill="#344245" stroke="#849194" stroke-width="3"/>
-            <path d="M430 222h49l28 42-29 52h-49z" fill="#344245" stroke="#849194" stroke-width="3"/>
-            <circle cx="208" cy="264" r="49" fill="#182225" stroke="#9ba5a7" stroke-width="7"/>
-            <circle cx="208" cy="264" r="27" fill="url(#dvs-orange)"/>
-            <circle cx="208" cy="264" r="10" fill="#2a3639"/>
-            <circle cx="361" cy="270" r="62" fill="#1b2528" stroke="#7d8a8d" stroke-width="8"/>
-            <circle cx="361" cy="270" r="39" fill="#3b494c" stroke="#a3adaf" stroke-width="5"/>
-            <circle cx="361" cy="270" r="13" fill="url(#dvs-orange)"/>
-            <path d="M169 165h225l-13 42H181z" fill="#202b2e" stroke="#6f7e81" stroke-width="2"/>
-            <g fill="#f29a38">
-              <rect x="195" y="177" width="27" height="9" rx="4"/>
-              <rect x="239" y="177" width="27" height="9" rx="4"/>
-              <rect x="283" y="177" width="27" height="9" rx="4"/>
-              <rect x="327" y="177" width="27" height="9" rx="4"/>
-            </g>
-            <path d="M155 342h255l-8 30H160z" fill="#182225"/>
-            <path d="M171 372l-17 30h72l11-30zM341 372l12 30h71l-17-30z" fill="#2d3a3d" stroke="#7f8c8f" stroke-width="3"/>
-            <path d="M93 199c-32-24-47-9-46 22 1 21 14 35 35 43" fill="none" stroke="#f29a38" stroke-width="10" stroke-linecap="round"/>
-            <path d="M444 185c43-21 66-2 62 32-3 24-18 34-37 39" fill="none" stroke="#9ca7a9" stroke-width="9" stroke-linecap="round"/>
-            <g fill="#bdc5c6">
-              <circle cx="171" cy="147" r="6"/>
-              <circle cx="396" cy="147" r="6"/>
-              <circle cx="157" cy="352" r="6"/>
-              <circle cx="411" cy="352" r="6"/>
-            </g>
-          </svg>
+          <img class="dvs-hall__engine" src="https://static.tildacdn.com/tild6562-3434-4239-b364-366636376163/engine.webp" width="1000" height="1000" alt="Автомобильный двигатель" loading="eager" fetchpriority="high" decoding="async">
           <div class="dvs-hall__visual-card">
             <p class="dvs-hall__visual-card-label">Точный подбор</p>
             <p class="dvs-hall__visual-card-text">Сверяем VIN, маркировку и комплектность агрегата</p>
