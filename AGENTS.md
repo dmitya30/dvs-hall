@@ -96,7 +96,8 @@ This file is the first operational source of truth after dialogue compression or
 
 - Do not skip an earlier gate merely because the launch date is close.
 - Do not publish before final contacts are supplied and the landing page is checked against the available Yandex moderation notice.
-- Do not commit an implementation presented for human visual QA until the requested QA gate passes.
+- Commit and push every mechanically validated implementation iteration immediately; never leave intended project changes only in the local working tree while waiting for visual QA.
+- If visual QA finds defects, correct them in a subsequent commit. Visual QA gates control approval and publication, not whether validated work is versioned.
 - Internal documentation may be committed after mechanical validation.
 
 ## Context restoration

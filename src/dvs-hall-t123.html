@@ -1104,6 +1104,62 @@
     transition: none;
   }
 }
+
+/* DVS visual refinement: mobile width and brand icons */
+.dvs-hall__shell,
+.dvs-hall__header-inner,
+.dvs-hall__hero-inner,
+.dvs-hall__actions,
+.dvs-hall__button,
+.dvs-hall__mobile-bar {
+  box-sizing: border-box;
+}
+.dvs-hall__brand-logo {
+  width: 68px;
+}
+.dvs-hall__button {
+  max-width: 100%;
+}
+.dvs-hall__button-icon {
+  width: 21px;
+  height: 21px;
+}
+@media (max-width: 600px) {
+  .dvs-hall {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+  }
+  .dvs-hall__shell,
+  .dvs-hall__header-inner,
+  .dvs-hall__hero-inner,
+  .dvs-hall__actions {
+    min-width: 0;
+    max-width: 100%;
+  }
+  .dvs-hall__brand-logo {
+    width: 58px;
+    margin-right: 8px;
+  }
+  .dvs-hall__actions {
+    width: 100%;
+  }
+  .dvs-hall__actions .dvs-hall__button {
+    width: 100%;
+    min-width: 0;
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+  .dvs-hall__mobile-bar {
+    right: 0;
+    left: 0;
+    width: auto;
+    max-width: none;
+  }
+  .dvs-hall__mobile-bar .dvs-hall__button {
+    min-width: 0;
+  }
+}
 </style>
 
 <div class="dvs-hall" id="dvs-hall">
@@ -1131,8 +1187,8 @@
           <h1 class="dvs-hall__title">Контрактные и новые <span class="dvs-hall__title-accent">двигатели</span> для вашего автомобиля</h1>
           <p class="dvs-hall__lead">Подберём подходящую модификацию, покажем состояние двигателя и рассчитаем стоимость с доставкой в ваш регион.</p>
           <div class="dvs-hall__actions">
-            <a class="dvs-hall__button" href="#contacts" data-demo data-channel="whatsapp"><span class="dvs-hall__button-icon" aria-hidden="true"><svg class="dvs-hall__button-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" focusable="false"><path d="M19.268 16.045c-.355-.79-.729-.806-1.068-.82-.277-.012-.593-.011-.909-.011s-.83.119-1.265.594-1.661 1.622-1.661 3.956 1.7 4.59 1.937 4.906c.237.316 3.282 5.259 8.104 7.161 4.007 1.58 4.823 1.266 5.693 1.187s2.807-1.147 3.202-2.255.395-2.057.277-2.255c-.119-.198-.435-.316-.909-.554s-2.807-1.385-3.242-1.543-.751-.237-1.068.238c-.316.474-1.225 1.543-1.502 1.859-.277.317-.554.357-1.028.119-.474-.238-2.002-.738-3.815-2.354-1.41-1.257-2.362-2.81-2.639-3.285-.277-.474-.03-.731.208-.968.213-.213.474-.554.712-.831.237-.277.316-.475.474-.791.158-.317.079-.594-.04-.831-.118-.239-1.04-2.585-1.462-3.523z"/></svg></span>Написать в WhatsApp</a>
-            <a class="dvs-hall__button dvs-hall__button--outline" href="#contacts" data-demo data-channel="telegram"><span class="dvs-hall__button-icon" aria-hidden="true"><svg class="dvs-hall__button-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" focusable="false"><path d="M5.43 11.87c3.5-1.52 5.83-2.53 7-3.02 3.33-1.39 4.02-1.63 4.47-1.64.1 0 .32.02.47.14.12.1.15.23.17.32.02.1.04.31.02.47-.18 1.9-.96 6.5-1.36 8.62-.17.9-.5 1.2-.82 1.23-.7.07-1.23-.46-1.9-.9-1.06-.7-1.65-1.12-2.68-1.8-1.19-.78-.42-1.21.26-1.91.18-.18 3.25-2.98 3.31-3.23.01-.03.01-.15-.05-.21-.07-.06-.18-.04-.25-.02-.1.02-1.8 1.14-5.07 3.35-.48.33-.92.49-1.31.48-.43-.01-1.25-.24-1.86-.44-.75-.24-1.35-.37-1.3-.79.03-.21.32-.43.9-.65z"/></svg></span>Telegram</a>
+            <a class="dvs-hall__button" href="#contacts" data-demo data-channel="whatsapp"><span class="dvs-hall__button-icon" aria-hidden="true"><svg class="dvs-hall__button-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" focusable="false"><path fill="#25D366" d="m4.868 43.303 2.694-9.835a18.86 18.86 0 0 1-2.535-9.489C5.032 13.514 13.548 5 24.014 5c5.079.002 9.845 1.979 13.43 5.566A18.85 18.85 0 0 1 43 23.994c-.004 10.465-8.522 18.98-18.986 18.98h-.008a18.9 18.9 0 0 1-9.073-2.311z"/><path fill="#fff" d="M19.268 16.045c-.355-.79-.729-.806-1.068-.82-.277-.012-.593-.011-.909-.011s-.83.119-1.265.594-1.661 1.622-1.661 3.956 1.7 4.59 1.937 4.906c.237.316 3.282 5.259 8.104 7.161 4.007 1.58 4.823 1.266 5.693 1.187s2.807-1.147 3.202-2.255.395-2.057.277-2.255c-.119-.198-.435-.316-.909-.554s-2.807-1.385-3.242-1.543-.751-.237-1.068.238c-.316.474-1.225 1.543-1.502 1.859-.277.317-.554.357-1.028.119-.474-.238-2.002-.738-3.815-2.354-1.41-1.257-2.362-2.81-2.639-3.285-.277-.474-.03-.731.208-.968.213-.213.474-.554.712-.831.237-.277.316-.475.474-.791.158-.317.079-.594-.04-.831-.118-.239-1.04-2.585-1.462-3.523z"/></svg></span>Написать в WhatsApp</a>
+            <a class="dvs-hall__button dvs-hall__button--outline" href="#contacts" data-demo data-channel="telegram"><span class="dvs-hall__button-icon" aria-hidden="true"><svg class="dvs-hall__button-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="12" r="12" fill="#229ED9"/><path fill="#fff" d="M5.43 11.87c3.5-1.52 5.83-2.53 7-3.02 3.33-1.39 4.02-1.63 4.47-1.64.1 0 .32.02.47.14.12.1.15.23.17.32.02.1.04.31.02.47-.18 1.9-.96 6.5-1.36 8.62-.17.9-.5 1.2-.82 1.23-.7.07-1.23-.46-1.9-.9-1.06-.7-1.65-1.12-2.68-1.8-1.19-.78-.42-1.21.26-1.91.18-.18 3.25-2.98 3.31-3.23.01-.03.01-.15-.05-.21-.07-.06-.18-.04-.25-.02-.1.02-1.8 1.14-5.07 3.35-.48.33-.92.49-1.31.48-.43-.01-1.25-.24-1.86-.44-.75-.24-1.35-.37-1.3-.79.03-.21.32-.43.9-.65z"/></svg></span>Telegram</a>
           </div>
           <p class="dvs-hall__prompt"><span class="dvs-hall__prompt-icon" aria-hidden="true">→</span><span>Для подбора отправьте VIN, маркировку двигателя или марку, модель и год автомобиля.</span></p>
         </div>
