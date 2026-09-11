@@ -8,7 +8,7 @@ This file is the first operational source of truth after dialogue compression or
 - Deliverable: a one-page landing page implemented on Tilda.
 - Business area: supply of contract engines and related automotive parts to customers in Russia.
 - Primary acquisition channels: Yandex Direct Search and Yandex Advertising Network.
-- Conversion channels: telephone, Telegram and WhatsApp.
+- Conversion channels: telephone, Telegram, WhatsApp and MAX.
 - Public lead forms are excluded unless the owner explicitly reopens that decision.
 - Market demand, customer objections and advertising compliance take priority over unsupported seller preferences.
 - The three client-supplied prior websites are the owner-approved commercial baseline. Their repeated claims may be used in the landing page unless the owner corrects them or a material contradiction appears.
