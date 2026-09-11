@@ -1359,6 +1359,153 @@ body.dvs-hall-modal-open {
     grid-template-columns: 1fr;
   }
 }
+
+/* Contact UI visual QA refinement */
+@media (min-width: 821px) {
+  .dvs-hall__hero-inner {
+    min-height: 0;
+    align-items: start;
+    padding-top: 42px;
+    padding-bottom: 48px;
+  }
+  .dvs-hall__eyebrow {
+    margin-bottom: 15px;
+  }
+  .dvs-hall__lead {
+    margin-top: 21px;
+  }
+  .dvs-hall__actions {
+    margin-top: 25px;
+  }
+  .dvs-hall__prompt {
+    margin-top: 12px;
+  }
+  .dvs-hall__visual {
+    min-height: 420px;
+  }
+}
+.dvs-hall.dvs-hall__modal .dvs-hall__modal-close {
+  position: absolute !important;
+  top: 15px !important;
+  right: 15px !important;
+  width: 40px !important;
+  min-width: 40px !important;
+  max-width: 40px !important;
+  height: 40px !important;
+  min-height: 40px !important;
+  max-height: 40px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: block !important;
+  color: var(--dvs-text) !important;
+  background: #eeeae1 !important;
+  border: 0 !important;
+  border-radius: 999px !important;
+  box-sizing: border-box !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+  appearance: none !important;
+  transform: none !important;
+}
+.dvs-hall.dvs-hall__modal .dvs-hall__modal-close::before,
+.dvs-hall.dvs-hall__modal .dvs-hall__modal-close::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 15px;
+  height: 2px;
+  background: currentColor;
+  border-radius: 2px;
+}
+.dvs-hall.dvs-hall__modal .dvs-hall__modal-close::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.dvs-hall.dvs-hall__modal .dvs-hall__modal-close::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.dvs-hall.dvs-hall__modal .dvs-hall__modal-phone,
+.dvs-hall.dvs-hall__modal .dvs-hall__modal-phone:link,
+.dvs-hall.dvs-hall__modal .dvs-hall__modal-phone:visited {
+  color: #ffffff !important;
+}
+.dvs-hall__modal-phone-copy {
+  min-width: 0;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3px;
+}
+.dvs-hall__modal-phone-label,
+.dvs-hall__modal-phone-value,
+.dvs-hall__modal-phone-arrow {
+  display: block;
+}
+.dvs-hall.dvs-hall__modal .dvs-hall__modal-phone-label {
+  color: rgba(255, 255, 255, 0.62) !important;
+  line-height: 1.1 !important;
+}
+.dvs-hall.dvs-hall__modal .dvs-hall__modal-phone-value {
+  color: #ffffff !important;
+  font-size: 19px !important;
+  font-weight: 850 !important;
+  line-height: 1.2 !important;
+}
+.dvs-hall.dvs-hall__modal .dvs-hall__modal-phone-arrow {
+  color: #ffffff !important;
+  line-height: 1 !important;
+}
+.dvs-hall__footer-contacts {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.dvs-hall__footer-phone {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 14px;
+  font-weight: 750;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.dvs-hall__footer-messenger {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  text-decoration: none;
+}
+.dvs-hall__footer-messenger--whatsapp {
+  background: var(--dvs-green);
+}
+.dvs-hall__footer-messenger--telegram {
+  background: var(--dvs-blue);
+}
+.dvs-hall__footer-messenger--max {
+  background: #ffffff;
+}
+.dvs-hall__footer-messenger svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+.dvs-hall__footer-messenger:focus-visible,
+.dvs-hall__footer-phone:focus-visible {
+  outline: 3px solid #ffd195;
+  outline-offset: 3px;
+}
+@media (max-width: 600px) {
+  .dvs-hall__footer-contacts {
+    width: 100%;
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+  .dvs-hall__footer-phone {
+    margin-right: 4px;
+  }
+}
 </style>
 
 <div class="dvs-hall" id="dvs-hall">
@@ -1483,7 +1630,7 @@ body.dvs-hall-modal-open {
           </article>
         </div>
         <div class="dvs-hall__section-actions">
-          <a class="dvs-hall__button" href="https://wa.me/79096220527?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%9D%D1%83%D0%B6%D0%B5%D0%BD%20%D0%BF%D0%BE%D0%B4%D0%B1%D0%BE%D1%80%20%D0%B4%D0%B2%D0%B8%D0%B3%D0%B0%D1%82%D0%B5%D0%BB%D1%8F.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D0%BA%D0%B0%D0%BA%D0%B8%D0%B5%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5%20%D0%BE%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D1%82%D1%8C%3F" data-channel="whatsapp" target="_blank" rel="noopener noreferrer">Отправить данные автомобиля <span aria-hidden="true">→</span></a>
+          <button class="dvs-hall__button" type="button" data-contact-modal aria-haspopup="dialog">Отправить данные автомобиля <span aria-hidden="true">↗</span></button>
         </div>
       </div>
     </section>
@@ -1592,24 +1739,29 @@ body.dvs-hall-modal-open {
           <a class="dvs-hall__contact-phone" href="tel:+79096220527" data-channel="phone">+7 909 622 05 27</a>
           <div class="dvs-hall__contact-buttons">
             <a class="dvs-hall__contact-link" href="https://wa.me/79096220527?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%9D%D1%83%D0%B6%D0%B5%D0%BD%20%D0%BF%D0%BE%D0%B4%D0%B1%D0%BE%D1%80%20%D0%B4%D0%B2%D0%B8%D0%B3%D0%B0%D1%82%D0%B5%D0%BB%D1%8F.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D0%BA%D0%B0%D0%BA%D0%B8%D0%B5%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5%20%D0%BE%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D1%82%D1%8C%3F" data-channel="whatsapp" target="_blank" rel="noopener noreferrer"><span>Написать в WhatsApp</span><span class="dvs-hall__contact-link-arrow" aria-hidden="true">→</span></a>
-            <a class="dvs-hall__contact-link dvs-hall__contact-link--telegram" href="https://t.me/shopdetailss" data-channel="telegram" target="_blank" rel="noopener noreferrer"><span>@shopdetailss</span><span class="dvs-hall__contact-link-arrow" aria-hidden="true">→</span></a>
+            <a class="dvs-hall__contact-link dvs-hall__contact-link--telegram" href="https://t.me/shopdetailss?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%9D%D1%83%D0%B6%D0%B5%D0%BD%20%D0%BF%D0%BE%D0%B4%D0%B1%D0%BE%D1%80%20%D0%B4%D0%B2%D0%B8%D0%B3%D0%B0%D1%82%D0%B5%D0%BB%D1%8F.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D0%BA%D0%B0%D0%BA%D0%B8%D0%B5%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5%20%D0%BE%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D1%82%D1%8C%3F" data-channel="telegram" target="_blank" rel="noopener noreferrer"><span>@shopdetailss</span><span class="dvs-hall__contact-link-arrow" aria-hidden="true">→</span></a>
 
             <a class="dvs-hall__contact-link dvs-hall__contact-link--max" href="https://max.ru/u/f9LHodD0cOLzNf3lp_jLIY_P-jB13vQMzDDgUYJIEi1WORmuAKVUyDOZYXU" target="_blank" rel="noopener noreferrer"><span>Написать в MAX</span><span class="dvs-hall__contact-link-arrow" aria-hidden="true">↗</span></a>
           </div>
-          <p class="dvs-hall__contact-hint">Сейчас указаны демонстрационные контакты. Реальные ссылки будут добавлены перед запуском рекламы.</p>
+          <p class="dvs-hall__contact-hint">Для подбора отправьте VIN, маркировку двигателя либо данные автомобиля.</p>
         </aside>
       </div>
     </section>
   </main>
 
-  <footer class="dvs-hall__footer">
-    <div class="dvs-hall__shell dvs-hall__footer-inner">
-      <span class="dvs-hall__footer-brand">ДВС-Холл</span>
-      <span class="dvs-hall__footer-copy">Контрактные и новые двигатели с доставкой по России · <span data-current-year>2026</span></span>
-      <button class="dvs-hall__footer-contact" type="button" data-contact-modal aria-haspopup="dialog">Связаться</button>
-      <a class="dvs-hall__footer-contact" href="https://t.me/shopdetailss" data-channel="telegram" target="_blank" rel="noopener noreferrer">@shopdetailss</a>
+  
+<footer class="dvs-hall__footer">
+  <div class="dvs-hall__shell dvs-hall__footer-inner">
+    <div class="dvs-hall__footer-brand">ДВС-Холл</div>
+    <div class="dvs-hall__footer-copy">Контрактные и новые двигатели с доставкой по России</div>
+    <div class="dvs-hall__footer-contacts" aria-label="Контакты">
+      <a class="dvs-hall__footer-phone" href="tel:+79096220527">+7 909 622 05 27</a>
+      <a class="dvs-hall__footer-messenger dvs-hall__footer-messenger--whatsapp" href="https://wa.me/79096220527?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%9D%D1%83%D0%B6%D0%B5%D0%BD%20%D0%BF%D0%BE%D0%B4%D0%B1%D0%BE%D1%80%20%D0%B4%D0%B2%D0%B8%D0%B3%D0%B0%D1%82%D0%B5%D0%BB%D1%8F.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D0%BA%D0%B0%D0%BA%D0%B8%D0%B5%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5%20%D0%BE%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D1%82%D1%8C%3F" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path fill="#fff" d="M19.268 16.045c-.355-.79-.729-.806-1.068-.82-.277-.012-.593-.011-.909-.011s-.83.119-1.265.594-1.661 1.622-1.661 3.956 1.7 4.59 1.937 4.906c.237.316 3.282 5.259 8.104 7.161 4.007 1.58 4.823 1.266 5.693 1.187s2.807-1.147 3.202-2.255.395-2.057.277-2.255c-.119-.198-.435-.316-.909-.554s-2.807-1.385-3.242-1.543-.751-.237-1.068.238c-.316.474-1.225 1.543-1.502 1.859-.277.317-.554.357-1.028.119-.474-.238-2.002-.738-3.815-2.354-1.41-1.257-2.362-2.81-2.639-3.285-.277-.474-.03-.731.208-.968.213-.213.474-.554.712-.831.237-.277.316-.475.474-.791.158-.317.079-.594-.04-.831-.118-.239-1.04-2.585-1.462-3.523z"/></svg></a>
+      <a class="dvs-hall__footer-messenger dvs-hall__footer-messenger--telegram" href="https://t.me/shopdetailss?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%9D%D1%83%D0%B6%D0%B5%D0%BD%20%D0%BF%D0%BE%D0%B4%D0%B1%D0%BE%D1%80%20%D0%B4%D0%B2%D0%B8%D0%B3%D0%B0%D1%82%D0%B5%D0%BB%D1%8F.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D0%BA%D0%B0%D0%BA%D0%B8%D0%B5%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5%20%D0%BE%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D1%82%D1%8C%3F" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#fff" d="M5.43 11.87c3.5-1.52 5.83-2.53 7-3.02 3.33-1.39 4.02-1.63 4.47-1.64.1 0 .32.02.47.14.12.1.15.23.17.32.02.1.04.31.02.47-.18 1.9-.96 6.5-1.36 8.62-.17.9-.5 1.2-.82 1.23-.7.07-1.23-.46-1.9-.9-1.06-.7-1.65-1.12-2.68-1.8-1.19-.78-.42-1.21.26-1.91.18-.18 3.25-2.98 3.31-3.23.01-.03.01-.15-.05-.21-.07-.06-.18-.04-.25-.02-.1.02-1.8 1.14-5.07 3.35-.48.33-.92.49-1.31.48-.43-.01-1.25-.24-1.86-.44-.75-.24-1.35-.37-1.3-.79.03-.21.32-.43.9-.65z"/></svg></a>
+      <a class="dvs-hall__footer-messenger dvs-hall__footer-messenger--max" href="https://max.ru/u/f9LHodD0cOLzNf3lp_jLIY_P-jB13vQMzDDgUYJIEi1WORmuAKVUyDOZYXU" target="_blank" rel="noopener noreferrer" aria-label="MAX"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1393.74 1388.97" aria-hidden="true" focusable="false"><path fill="#0077FF" d="M672.69.98C257.52 22.67-16.54 348.28.78 758.87c7.57 179.72 79.81 334.37 96.93 504.93 4.38 44.18-8.36 98.72 42.59 118.02 62.69 23.68 158.82-16.12 211.37-52.54 17.91-12.14 35.03-26.27 48.16-43.79 54.33 36.03 105.88 70.85 170.57 86.38 284.81 68.27 596.88-87.97 735.6-338.94C1566.72 561.44 1214.25-27.23 672.69.98zM511.48 984.97c-22.49 17.51-44.18 41.4-69.06 55.13-36.02 19.31-47.17-.79-60.7-32.64-42.59-101.3-47.77-273.86-22.89-379.94 33.44-144.29 145.09-271.27 298.54-284.8 155.24-13.73 299.33 65.08 364.42 207.39 144.1 316.65-224.7 629.32-510.3 435.07z"/></svg></a>
     </div>
-  </footer>
+  </div>
+</footer>
 
   <div class="dvs-hall__mobile-bar" aria-label="Быстрый контакт">
     <button class="dvs-hall__button" type="button" data-contact-modal aria-haspopup="dialog">Связаться</button>
@@ -1621,14 +1773,14 @@ body.dvs-hall-modal-open {
 
 <div class="dvs-hall dvs-hall__modal" id="dvs-hall-contact-modal" role="dialog" aria-modal="true" aria-labelledby="dvs-hall-contact-title" hidden>
   <div class="dvs-hall__modal-dialog" role="document" tabindex="-1">
-    <button class="dvs-hall__modal-close" type="button" data-contact-modal-close aria-label="Закрыть окно">×</button>
+    <button class=\"dvs-hall__modal-close\" type="button" data-contact-modal-close aria-label="Закрыть окно"><span class=\"dvs-hall__sr-only\">Закрыть</span></button>
     <p class="dvs-hall__modal-kicker">Контакты</p>
     <h2 class="dvs-hall__modal-title" id="dvs-hall-contact-title">Связаться с ДВС-Холл</h2>
     <p class="dvs-hall__modal-copy">Выберите удобный способ связи. Для подбора подготовьте VIN или маркировку двигателя.</p>
-    <a class="dvs-hall__modal-phone" href="tel:+79096220527"><span><span class="dvs-hall__modal-phone-label">Телефон</span><br>+7 909 622 05 27</span><span aria-hidden="true">↗</span></a>
+    <a class="dvs-hall__modal-phone" href="tel:+79096220527"><span class="dvs-hall__modal-phone-copy"><span class="dvs-hall__modal-phone-label">Телефон</span><span class="dvs-hall__modal-phone-value">+7 909 622 05 27</span></span><span class="dvs-hall__modal-phone-arrow" aria-hidden="true">↗</span></a>
     <div class="dvs-hall__modal-channels">
       <a class="dvs-hall__modal-channel dvs-hall__modal-channel--whatsapp" href="https://wa.me/79096220527?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%9D%D1%83%D0%B6%D0%B5%D0%BD%20%D0%BF%D0%BE%D0%B4%D0%B1%D0%BE%D1%80%20%D0%B4%D0%B2%D0%B8%D0%B3%D0%B0%D1%82%D0%B5%D0%BB%D1%8F.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D0%BA%D0%B0%D0%BA%D0%B8%D0%B5%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5%20%D0%BE%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D1%82%D1%8C%3F" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a>
-      <a class="dvs-hall__modal-channel dvs-hall__modal-channel--telegram" href="https://t.me/shopdetailss" target="_blank" rel="noopener noreferrer">Telegram ↗</a>
+      <a class="dvs-hall__modal-channel dvs-hall__modal-channel--telegram" href="https://t.me/shopdetailss?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%9D%D1%83%D0%B6%D0%B5%D0%BD%20%D0%BF%D0%BE%D0%B4%D0%B1%D0%BE%D1%80%20%D0%B4%D0%B2%D0%B8%D0%B3%D0%B0%D1%82%D0%B5%D0%BB%D1%8F.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D0%BA%D0%B0%D0%BA%D0%B8%D0%B5%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5%20%D0%BE%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D1%82%D1%8C%3F" target="_blank" rel="noopener noreferrer">Telegram ↗</a>
       <a class="dvs-hall__modal-channel dvs-hall__modal-channel--max" href="https://max.ru/u/f9LHodD0cOLzNf3lp_jLIY_P-jB13vQMzDDgUYJIEi1WORmuAKVUyDOZYXU" target="_blank" rel="noopener noreferrer">MAX ↗</a>
     </div>
     <p class="dvs-hall__modal-hint">Сообщите VIN, маркировку двигателя либо марку, модель, год и объём автомобиля.</p>

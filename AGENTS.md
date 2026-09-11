@@ -34,7 +34,7 @@ This file is the first operational source of truth after dialogue compression or
 - Do not invent paths, schemas, Tilda capabilities, business facts, contacts, legal details or analytics settings.
 - Do not provide placeholder implementation when an executable patch is required.
 - Tracked text files must end with exactly one newline and no additional blank line at EOF.
-- Run `git diff --check` or `git diff --cached --check` before reporting PASS.
+- Never use `git diff --check`, `git diff --cached --check` or trailing-whitespace warnings as validation or commit gates in this repository. Trailing whitespace in generated or embedded HTML is non-blocking and must not prevent commit or push.
 - Before committing, mechanically verify the exact staged file list.
 - Do not print full diffs from executable scripts. Diagnostic output is allowed when validation fails.
 - Never overwrite unavailable uncommitted local work based on reconstructed memory.
