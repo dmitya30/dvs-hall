@@ -29,6 +29,7 @@ This file is the first operational source of truth after dialogue compression or
 - Do not use heredoc syntax, including Python and `cat` heredocs.
 - Avoid unfinished shell structures that can produce the secondary prompt.
 - Prefer deterministic file replacements or narrowly scoped Python commands.
+- Generated HTML attributes must contain literal quotation marks; never emit backslashes before attribute quotation marks, and mechanically verify markup outside JavaScript before committing.
 - On Windows Git Bash, never pass large source files, HTML documents or other long payloads through `python -c`. Write a temporary `.py` file, run it, validate the result and delete the temporary file only after successful validation.
 - Read the actual repository state and file schema before modifying existing files.
 - Do not invent paths, schemas, Tilda capabilities, business facts, contacts, legal details or analytics settings.
